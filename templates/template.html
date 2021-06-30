@@ -2,10 +2,19 @@
 <html>
 <body>
 
+  <input type="text" id="text" name="fname">
+
+  <button class = "load_button"  onclick=loadText(document.getElementById("text").value) type="button">
+      Wyślij
+  </button><br /> 
+  <link rel="shortcut icon" href="http://127.0.0.1:5000/static/hello.mp3"> REFRESH </link>
+
   <audio controls>
     <source src="{{url_for('static', filename='hello.mp3')}}" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
 </body>
+
+<script src="{{url_for('static', filename='home.js')}}"></script>
 </html>
